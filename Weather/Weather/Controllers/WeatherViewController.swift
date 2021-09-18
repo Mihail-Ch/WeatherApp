@@ -10,6 +10,7 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     var weathers = String()
+    let weatherService = WeatherService()
     
     
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -22,7 +23,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        weatherService.loadWeatherData(city: "Moscow")
     }
     
 
